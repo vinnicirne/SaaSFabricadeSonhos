@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { User, Calendar, MapPin, Music, Sparkles, Image as ImageIcon, Headphones, ChevronRight, Wand2 } from "lucide-react";
+import { User, Calendar, MapPin, Music, Sparkles, Image as ImageIcon, Headphones, ChevronRight, Wand2, CheckCircle2 } from "lucide-react";
 
 export default function DreamFactoryBuilder() {
   const [step, setStep] = useState(1);
