@@ -3,8 +3,18 @@
 import { useState } from "react";
 import { Copy, Edit2, CheckCircle2, AlertCircle, PlusCircle, Link as LinkIcon, Save, Users, Store } from "lucide-react";
 
+interface Plan {
+  id: number;
+  name: string;
+  price: number;
+  interval?: string;
+  features: string[];
+  mpLink: string;
+  active: boolean;
+}
+
 // Mock B2C
-const b2cPlans = [
+const b2cPlans: Plan[] = [
   {
     id: 1,
     name: "Pacote Standard",
@@ -24,7 +34,7 @@ const b2cPlans = [
 ];
 
 // Mock B2B (Resellers)
-const b2bPlans = [
+const b2bPlans: Plan[] = [
   {
     id: 3,
     name: "Revendedor Iniciante",
@@ -44,6 +54,7 @@ const b2bPlans = [
     active: true,
   }
 ];
+
 
 export default function PricingDashboard() {
   const [tab, setTab] = useState("B2C");
